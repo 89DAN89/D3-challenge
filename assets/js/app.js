@@ -9,7 +9,7 @@ var margin = {
   left: 100
 };
 
-var width = svgWi - margin.left - margin.right;
+var width = svgW - margin.left - margin.right;
 var height = svgH - margin.top - margin.bottom;
 
 var svg = d3
@@ -204,21 +204,21 @@ d3.csv("assets/data/data.csv").then(function(censusData, err) {
       .attr("y", 15)
       .attr("value", "poverty")
       .classed("active", true)
-      .text("In Poverty (%)");
+      .text("% in Poverty");
   
     var ageLabel = xLabelsGroup.append("text")
       .attr("x", 0)
       .attr("y", 35)
       .attr("value", "age") 
       .classed("inactive", true)
-      .text("Age (Median)");
+      .text("Median Age");
       
     var incomeLabel = xLabelsGroup.append("text")
       .attr("x", 0)
       .attr("y", 55)
       .attr("value", "income") 
       .classed("inactive", true)
-      .text("Household Income (Median)");
+      .text("Median Household Income");
 
     var yLabelsGroup = chartGroup.append("g")
         .attr("transform", "rotate(-90)")
@@ -235,14 +235,14 @@ d3.csv("assets/data/data.csv").then(function(censusData, err) {
       .attr("y", -20 - (margin.left/3))
       .attr("value", "obesity") 
       .classed("inactive", true)
-      .text("Obese (%)");   
+      .text("% Obese");   
 
     var smokesLabel = yLabelsGroup.append("text")
       .attr("x", 0 - (height/2))
       .attr("y", -40 - (margin.left/3))
       .attr("value", "smokes") 
       .classed("inactive", true)
-      .text("Smokers (%)");
+      .text("% Smokers");
   
 
     var circlesGroup = updateToolTip(circlesGroup, chosenXAxis, chosenYAxis);
