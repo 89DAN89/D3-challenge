@@ -138,7 +138,7 @@ function yScale(data, chosenYAxis) {
   };
 
 
-d3.csv("/assets/data/data.csv").then(function(censusData, err) {
+d3.csv("assets/data/data.csv").then(function(censusData, err) {
     if (err) throw err;
   
     // parse data
