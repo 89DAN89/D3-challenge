@@ -116,7 +116,7 @@ function yScale(data, chosenYAxis) {
   
     var toolTip = d3.tip()
       .attr("class", "tooltip")
-      .offset([80, -60])
+      .offset([20, 20])
       .html(d => {
         return (`${d.state} (${d.abbr})<br>${ylabel}${d[chosenYAxis]}<br>${xlabel}${d[chosenXAxis]}`);
       });
